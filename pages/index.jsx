@@ -1,16 +1,23 @@
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import Intro from '../modules/Intro'
+import Head from "next/head";
+import MetaTags from '../axg-react/MetaTags'
 
 export default function Home({}) {
-  const router = useRouter();
-  useEffect(() => {
-    if (window.location.pathname != router.pathname) router.push(`/${window.location.pathname}`)
-  })
-
   return (
     <>
-      <Intro mainText="This is THE WEBX" subText="Grow your business" />
+      <Head>
+        <title>ساینا گستر | خانه</title>
+        <MetaTags />
+      </Head>
+      index
     </>
   )
 }
+
+// export const getStaticProps = async () => {
+//   const categoriesList = await fetch(`${process.env.RexfontAPI}/getcategories`).then(res => res.json())
+//   return {
+//     props: {
+//       categoriesList,
+//     }
+//   }
+// }
