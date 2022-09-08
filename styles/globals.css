@@ -9,7 +9,8 @@ body {
   direction: rtl;
   padding: 0;
   margin: 0;
-  background: linear-gradient(119.05deg, #1f2aa7 9.77%, #4451ee 82.1%);
+  /* background: linear-gradient(119.05deg, #1f2aa7 9.77%, #4451ee 82.1%); */
+  background-color: var(--bg2);
   min-height: 100vh;
 }
 
