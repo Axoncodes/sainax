@@ -11,7 +11,6 @@ export default function MyApp({ Component, pageProps }) {
         <MetaTags
           description = "sainax description"
           href = "https://fa.sainax.com"
-          title = "ساینا گستر"
           ico = "/images/circle logo.png"
           locale = "fa"
         />
