@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Home({}) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -10,12 +10,3 @@ export default function Home({}) {
     </>
   )
 }
-
-// export const getStaticProps = async () => {
-//   const categoriesList = await fetch(`${process.env.RexfontAPI}/getcategories`).then(res => res.json())
-//   return {
-//     props: {
-//       categoriesList,
-//     }
-//   }
-// }
