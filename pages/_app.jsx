@@ -24,11 +24,11 @@ export default function MyApp({ Component, pageProps }) {
         searchbar={false}
         SearchbarPlaceholder={"محصول خود را جستجو کنید"}
         menuItems={[
-          {name: 'خانه', uri: '/', color: 'var(--primaryColor)', activeColor: '#fff', activeBg: 'var(--secondaryColor)'},
-          {name: 'فروشگاه', uri: '/shop', color: 'var(--primaryColor)', activeColor: '#fff', activeBg: 'var(--secondaryColor)'},
-          {name: 'درباره ساینا', uri: '/about', color: 'var(--primaryColor)', activeColor: '#fff', activeBg: 'var(--secondaryColor)'},
-          {name: 'تماس با ما', uri: '/contact', color: 'var(--primaryColor)', activeColor: '#fff', activeBg: 'var(--secondaryColor)'},
-          {name: 'وبلاگ', uri: '/blog', color: 'var(--primaryColor)', activeColor: '#fff', activeBg: 'var(--secondaryColor)'},
+          {name: 'خانه', uri: '/', color: 'var(--primaryColor)', activeColor: 'var(--tertiaryTextColor)', activeBg: 'var(--secondaryColor)'},
+          {name: 'فروشگاه', uri: '/shop', color: 'var(--primaryColor)', activeColor: 'var(--tertiaryTextColor)', activeBg: 'var(--secondaryColor)'},
+          {name: 'درباره ساینا', uri: '/about', color: 'var(--primaryColor)', activeColor: 'var(--tertiaryTextColor)', activeBg: 'var(--secondaryColor)'},
+          {name: 'تماس با ما', uri: '/contact', color: 'var(--primaryColor)', activeColor: 'var(--tertiaryTextColor)', activeBg: 'var(--secondaryColor)'},
+          {name: 'وبلاگ', uri: '/blog', color: 'var(--primaryColor)', activeColor: 'var(--tertiaryTextColor)', activeBg: 'var(--secondaryColor)'},
         ]}
         
       />
