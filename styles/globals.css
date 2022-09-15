@@ -6,6 +6,12 @@
 :root {
   --primaryColor: #1d418d;
   --secondaryColor: #ff5e14;
+  --tertiaryColor: #eff0f2;
+
+  --primaryTextColor: #001659;
+  --secondaryTextColor: #565969;
+  --tertiaryTextColor: #fff;
+
 }
 
 html,
