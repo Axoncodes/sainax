@@ -39,8 +39,8 @@ export default function MyApp({ Component, pageProps }) {
 
       <Script type='module' src={`${process.env.LocalAxg}/init/v4`} strategy="beforeInteractive" />
       {/* <Script src={`${process.env.LocalAxg}/dropdown/v3/script`} strategy="lazyOnload" /> */}
-      <Script src={`${process.env.LocalAxg}/searchbarTemplateJs`} strategy="lazyOnload" />
-      <Script src={`${process.env.LocalAxg}/searchbarJs`} strategy="lazyOnload" />
+      {/* <Script src={`${process.env.LocalAxg}/searchbarTemplateJs`} strategy="lazyOnload" /> */}
+      {/* <Script src={`${process.env.LocalAxg}/searchbarJs`} strategy="lazyOnload" /> */}
     </>
   )
 }
