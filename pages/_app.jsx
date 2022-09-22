@@ -37,10 +37,10 @@ export default function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
 
-      <Script type='module' src={`${process.env.StagingAxg}/init/v4`} strategy="beforeInteractive" />
-      <Script src={`${process.env.Axg}/dropdown/v3/script`} strategy="lazyOnload" />
-      <Script src={`${process.env.Axg}/searchbarTemplateJs`} strategy="lazyOnload" />
-      <Script src={`${process.env.Axg}/searchbarJs`} strategy="lazyOnload" />
+      <Script type='module' src={`${process.env.LocalAxg}/init/v4`} strategy="beforeInteractive" />
+      {/* <Script src={`${process.env.LocalAxg}/dropdown/v3/script`} strategy="lazyOnload" /> */}
+      <Script src={`${process.env.LocalAxg}/searchbarTemplateJs`} strategy="lazyOnload" />
+      <Script src={`${process.env.LocalAxg}/searchbarJs`} strategy="lazyOnload" />
     </>
   )
 }
