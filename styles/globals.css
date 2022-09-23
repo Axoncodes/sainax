@@ -14,11 +14,6 @@
 
 }
 
-html,
-body {
-  direction: rtl;
-}
-
 body * {
   font-family: 'iranyekan', sans-serif!important;
 }
