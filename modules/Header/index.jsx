@@ -58,7 +58,7 @@ export default function Header() {
               },
               {
                 title: 'تیپ 2',
-                url: '/shop/tehran-cement/type-1',
+                url: '/shop/tehran-cement/type-2',
                 level: 'undertab',
                 color: '#fff',
                 dir: 'rtl',
