@@ -5,7 +5,6 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="stylesheet" href={`${process.env.RexfontAPI}/font/all.css`} />
-        <link rel="stylesheet" href={`${process.env.LocalAxg}/layoutactivationStyle`} />
       </Head>
       <body>
         <Main />

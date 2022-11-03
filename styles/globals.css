@@ -4,7 +4,7 @@
 }
 
 :root {
-  --primaryColor: #1d418d;
+  --primaryColor: #00235a;
   --secondaryColor: #ff5e14;
   --tertiaryColor: #eff0f2;
 
@@ -14,6 +14,48 @@
 
 }
 
+.primary_bg {background-color: var(--primaryColor)!important}
+.primary_color {color: var(--primaryTextColor)!important}
+.secondary_bg {background-color: var(--secondaryColor)!important}
+.secondary_color {color: var(--secondaryTextColor)!important}
+.tertiary_bg {background-color: var(--tertiaryColor)!important}
+.tertiary_color {color: var(--tertiaryTextColor)!important}
+
 body * {
   font-family: 'iranyekan', sans-serif!important;
+}
+
+.textstrokeblue {
+  text-shadow: -1px -1px 0 #ffffff14, 1px -1px 0 #ffffff14, -1px 1px 0 #ffffff14, 1px 1px 0 #ffffff14;
+  position: absolute;
+  bottom: -10px;
+}
+.textstrokewhite {
+  text-shadow: -1px -1px 0 #00000038, 1px -1px 0 #00000038, -1px 1px 0 #00000038, 1px 1px 0 #00000038;
+  position: absolute;
+  bottom: -10px;
+}
+
+.abitoffthetop {top: 10px}
+
+
+.articlessize {
+  min-width: 30%
+}
+.articlesinnersize {
+  max-width: 300px
+}
+@media (min-width: 1441px) {
+  .articlesinnersize {
+    max-width: 400px
+  }
+}
+
+.accordions {
+  border-bottom: 1px solid #a3a3a3;
+}
+
+.productsListBorder {
+  border: 1px solid #00000029;
+  border-bottom: 3px solid var(--secondaryColor);
 }

@@ -46,7 +46,8 @@ export default function Header() {
             title: 'سیمان تهران',
             url: '/shop/tehran-cement',
             level: 'undertab',
-            color: '#fff',
+            color: 'var(--secondaryColor)',
+            fontsize: 'var(--l7-text-fontSize)',
             dir: 'rtl',
             content: [
               {
@@ -55,6 +56,7 @@ export default function Header() {
                 level: 'undertab',
                 color: '#fff',
                 dir: 'rtl',
+                activeBg: 'var(--secondaryColor)',
               },
               {
                 title: 'تیپ 2',
