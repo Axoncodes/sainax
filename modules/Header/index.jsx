@@ -1,10 +1,33 @@
 import dynamic from "next/dynamic";
+import { useState } from "react";
+import { useEffect } from "react";
+import { fetchposts } from '../../lib/posts'
 const HeaderComponent = dynamic(() => import('../../axg-react/Header'), {ssr: false,})
 
 export default function Header() {
+  const [posts, setPosts] = useState([])
+  useEffect(() => {fetchposts().then(posts =>setPosts(posts))}, [])
+  useEffect(() => {
+    searchQueries['mainsearchquery'] = {searchquerynames: posts.map(post => post.title), searchquerylinks: posts.map(post => post.link),}
+    !!window['searchbarV2Handler'] ? searchbarV2Handler() : null
+  }, [posts])
   return <HeaderComponent
-    searchbar={false}
     SearchbarPlaceholder={"محصول خود را جستجو کنید"}
+    searchbar = {{
+      id: 'main_searchbar',
+      name: 'main_searchbar',
+      inputcustomclasses: 'font_l1 rtl wide padding_l3 noborder round_l3',
+      customclasses: 'rtl wide',
+      bg: '#c1c1c1a3',
+      color: '#000',
+      placeholder: 'جستجو را شروع کنید...',
+      queryid: 'mainsearchquery',
+      collapseonmobile: '1',
+      dir: 'rtl',
+      labelclasses: 'subcontainer lefty hoversearchcoverlabel',
+      inputcovercustomclasses: 'subcontainer vertical',
+      reslistcustomclasses: 'boxshadow darker rtl',
+    }}
     dir={'rtl'}
     menuGroup={{
       headTitlecolor: '#ededed',
@@ -41,6 +64,7 @@ export default function Header() {
         subopening: 'sub',
         background: 'var(--primaryColor)',
         dir: 'rtl',
+        exit: '1',
         options: [
           {
             title: 'سیمان تهران',
@@ -72,7 +96,7 @@ export default function Header() {
       {
         structure: 'link',
         name: 'تماس با ما',
-        link: '/contact',
+        link: '/contact-us',
         color: 'var(--primaryColor)',
         activeColor: 'var(--tertiaryTextColor)',
         activeBg: 'var(--primaryColor)',
@@ -90,7 +114,7 @@ export default function Header() {
       {
         structure: 'link',
         name: 'درباره ساینا',
-        link: '/about',
+        link: '/about-us',
         color: 'var(--primaryColor)',
         activeColor: 'var(--tertiaryTextColor)',
         activeBg: 'var(--primaryColor)',

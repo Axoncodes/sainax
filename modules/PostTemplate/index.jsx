@@ -24,7 +24,7 @@ export default function PostTemplate({
           alt={image.alt}
           customclasses={'round_l1'}
         /> : ''}
-        <section className="subcontainer vertical padding_l4 widePadding_l7 righty">
+        <section className="subcontainer vertical padding_l4 widePadding_l7 righty rtl">
           <Text
             subtext={title}
             subtextclasses={`nomargin weight_l9`}
@@ -40,14 +40,13 @@ export default function PostTemplate({
           />
           {/* shoudl be a plus icon! */}
           <Button
-            text={'بیشتر بخوانید'}
-            iconclasses={'round_l1 padding_l2 rexfont_init address-book rx_light'}
+            text={'مشاهده جزئیات'}
+            iconclasses={'font_l5 round_l1 padding_l2 rexfont_init address-book rx_light'}
             innerclasses={'padding_l0'}
-            customclasses={'rtl'}
+            customclasses={'nohovershadow highlightIconOnHover rtl'}
             size='large'
             bg={'#0000'}
             color={'#001659'}
-            height='49px'
             plane={'1'}
             link={link}
           />

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import MetaTags from '../axg-react/MetaTags'
 import Script from 'next/script'
 import dynamic from 'next/dynamic'
+import ActivationHandler from '../axg-react/ActivationHandler'
 
 const Header = dynamic(() => import('../modules/Header'), {ssr: false,})
 const Topnav = dynamic(() => import('../modules/Topnav'), {ssr: false,})
@@ -20,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
           locale = "fa"
         />
       </Head>
-
+      <Script src={'/head.js'} strategy="beforeInteractive" />
       <Topnav />
       <Header />
 
@@ -28,9 +29,9 @@ export default function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
       <Footer />
-
-      <Script type='module' src={`${process.env.LocalAxg}/init/v4`} strategy="beforeInteractive" />
-      <Script type='module' src={`${process.env.LocalAxg}/global/runScripts`} strategy="lazyOnload" />
+      <ActivationHandler />
+      <Script type='module' src={`${process.env.BetaAxg}/init/v4`} strategy="beforeInteractive" />
+      <Script type='module' src={`${process.env.BetaAxg}/global/runScripts`} strategy="lazyOnload" />
     </>
   )
 }

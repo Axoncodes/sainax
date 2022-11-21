@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 const Text = dynamic(() => import('../../axg-react/Text'), {ssr: false,})
 const Button = dynamic(() => import('../../axg-react/Button'), {ssr: false,})
 
-export default function Hero() {
+export default function Hero({title, subtitle}) {
   return (
     <section
       className="container vertical lefty"
@@ -17,7 +17,7 @@ export default function Hero() {
     >
       <section className="subcontainer vertical lefty">
         <Text
-          text={'محصولات ساینا'}
+          text={title}
           textcolor={'#fff'}
           textclasses={'subcontainer lefty nomargin wide'}
           textalign={'lefty'}
@@ -25,13 +25,13 @@ export default function Hero() {
           innercustomclasses={'wide_important'}
         />
         <Text
-          text={'توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر .توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر.'}
+          text={subtitle}
           textcolor={'#e0e0e0'}
           textclasses={'subcontainer nomargin wide textright rtl'}
           textalign={'righty'}
           textfontsize={'var(--l4-text-fontSize)'}
           innercustomclasses={'wide_important'}
-          inlinestyle={'width: 60%;'}
+          customclasses={'paragraphAtHero'}
         />
       </section>
       <section className='subcontainer horizontal lefty horizontalTabletBreak'>
@@ -44,10 +44,10 @@ export default function Hero() {
           color={'#fff'}
           height={'48px'}
           plane={'1'}
-          link={'/blog'}
+          link={'/shop'}
         />
         <Button
-          text={'همه محصولات'}
+          text={'همه مقالات'}
           innerclasses={'padding_l0 widePadding_l3 round_l1'}
           size={'large'}
           customclasses={'rtl'}

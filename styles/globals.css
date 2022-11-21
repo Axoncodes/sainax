@@ -37,18 +37,10 @@ body * {
 }
 
 .abitoffthetop {top: 10px}
-
-
-.articlessize {
-  min-width: 30%
-}
-.articlesinnersize {
-  max-width: 300px
-}
+.articlessize {min-width: 30%}
+.articlesinnersize {max-width: 300px}
 @media (min-width: 1441px) {
-  .articlesinnersize {
-    max-width: 400px
-  }
+  .articlesinnersize {max-width: 400px}
 }
 
 .accordions {
@@ -59,3 +51,16 @@ body * {
   border: 1px solid #00000029;
   border-bottom: 3px solid var(--secondaryColor);
 }
+
+.paragraphAtHero {width: 60%!important}
+
+@media (max-width: 600px) {
+  .paragraphAtHero {width: 100%!important}
+}
+
+.highlightIconOnHover .axg_icon {transition: all .3s}
+.highlightIconOnHover:hover .axg_icon {background-color: var(--secondaryColor)}
+
+.highlightOnlyIconOnHover .axg_icon, .highlightOnlyIconOnHover, .highlightOnlyIconOnHover .buttonText {transition: all .3s}
+.highlightOnlyIconOnHover:hover {background-color: var(--secondaryColor)!important}
+.highlightOnlyIconOnHover:hover .axg_icon, .highlightOnlyIconOnHover:hover .buttonText {color: var(--tertiaryTextColor)!important}

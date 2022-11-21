@@ -1,8 +1,7 @@
 import dynamic from 'next/dynamic'
-const Text = dynamic(() => import('../../axg-react/Text'), {ssr: false,})
-const Button = dynamic(() => import('../../axg-react/Button'), {ssr: false,})
 const Carousel = dynamic(() => import('../../axg-react/Carousel'), {ssr: false,})
 const PostTemplate = dynamic(() => import('../PostTemplate'), {ssr: false,})
+const SectionHead = dynamic(() => import('../SectionHead'), {ssr: false,})
 
 export default function Articles({posts}) {
 
@@ -25,30 +24,13 @@ export default function Articles({posts}) {
     <>
       <section className="container vertical padding_l0 primary_bg">
         <section className="subcontainer horizontal righty padding_l3">
-          {/* TODO: This icon has to be a left carrot, but since we ain't got any for now, i'm putting a random icon */}
-          <Button
-            text={'همه مقالات'}
-            iconclasses={'secondary_bg round_l1 padding_l2 rexfont_init address-book rx_light'}
-            innerclasses={'padding_l0'}
-            size='large'
-            bg={'#0000'}
-            color={'#fff'}
-            height='49px'
-            plane={'1'}
-            link={'/blog'}
-          />
-          <Text
-            text={'مقالات ساینا'}
-            innercustomclasses={'wide_important'}
+          <SectionHead
+            title={'مقالات ساینا'}
+            btnTitle={'همه مقالات'}
+            btnLink={'/blog'}
+            textcustomclasses={'textstrokeblue'}
             textcolor={'var(--primaryColor)'}
-            textclasses={'nomargin textstrokeblue widePadding_l9'}
-            textalign={'lefty'}
-            textfontsize={'var(--l9-text-fontSize)'}
-            subtext={'مقالات ساینا'}
             subtextcolor={'#fff'}
-            subtextclasses={'subcontainer lefty nomargin wide abitoffthetop'}
-            subtextalign={'righty'}
-            subtextfontsize={'var(--l7-text-fontSize)'}
           />
         </section>
 

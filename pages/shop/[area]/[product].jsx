@@ -1,7 +1,8 @@
 import SubHeader from "../../../axg-react/SubHeader"
 import ProductTemplate from "../../../axg-react/shop/Product"
+import { fetchposts } from "../../../lib/posts"
 
-export default function Product({image, alt, name, currency, description, features}) {
+export default function Product({image, alt, name, currency, description, features, acf}) {
   return (
     <>
       <SubHeader
@@ -22,14 +23,13 @@ export default function Product({image, alt, name, currency, description, featur
 }
 
 export async function getStaticPaths() {
-  const allProducts = await fetch(`http://localhost:8271/productsList`).then(res => res.json()).then(res => res.documents)
-
-  const paths = allProducts.map(product => ({
+  const paths = await fetchposts('product')
+  .then(posts => posts.map(product => ({
     params: {
       product: product.slug,
-      area: product.area_slug,
+      area: product.acf.order_area.slug,
     }
-  }))
+  })))
   return {
     paths,
     fallback: false
@@ -39,9 +39,7 @@ export async function getStaticPaths() {
 export const getStaticProps = async ({params}) => {
   const { product } = params
 
-  const targetProduct = await fetch(`http://localhost:8271/productsList`)
-  .then(res => res.json())
-  .then(res => res.documents)
+  const targetProduct = await fetchposts('product')
   .then(products => products.filter(item => item.slug == product)[0])
   
   return {

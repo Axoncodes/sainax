@@ -5,7 +5,7 @@ const Button = dynamic(() => import('../../axg-react/Button'), {ssr: false,})
 export default function Footer() {
   const custombtn = (text, link, icon, classes) => <Button
     text={text}
-    iconclasses={`font_l4 round_l1 rexfont_init ${icon}`}
+    iconclasses={icon ? `font_l4 round_l1 rexfont_init ${icon}` : ''}
     innerclasses={`padding_l2 padding_l0 ${classes}`}
     customclasses={'round_l1 rtl'}
     textclasses={'font_l2'}
@@ -26,7 +26,7 @@ export default function Footer() {
     innercustomclasses={'wide_important'}
   />
   return (
-    <section className={'container topy'} style={{backgroundColor: '#0a1229'}}>
+    <section className={'container topy horizontal'} style={{backgroundColor: '#0a1229'}}>
       <section className={'subcontainer vertical lefty'}>
         {customTitle('شعار ساینا گسنر')}
         <Text
@@ -39,7 +39,7 @@ export default function Footer() {
         />
         {custombtn('شنبه - پنج شنبه', '/blog', 'address-book rx_light')}
       </section>
-      <section className={'subcontainer vertical lefty'}>
+      <section className={'subcontainer vertical lefty norowgap'}>
         {customTitle('خدمات ساینا گستر')}
         {custombtn('مورد اول', '/blog')}
         {custombtn('مورد اول', '/blog')}
@@ -47,7 +47,7 @@ export default function Footer() {
         {custombtn('مورد اول', '/blog')}
         {custombtn('مورد اول', '/blog')}
       </section>
-      <section className={'subcontainer vertical lefty'}>
+      <section className={'subcontainer vertical lefty norowgap'}>
         {customTitle('اطلاعات دفتر ساینا')}
         {custombtn('مورد اول', '/blog', 'address-book rx_light')}
         {custombtn('مورد اول', '/blog', 'address-book rx_light')}

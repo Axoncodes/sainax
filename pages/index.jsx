@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { fetchposts, filterPostsByCategory } from "../lib/posts";
 
 const Articles = dynamic(() => import("../modules/articles"), {ssr: false})
 const Accordions = dynamic(() => import("../modules/Accordions"), {ssr: false})
@@ -12,52 +13,19 @@ export default function Home({posts}) {
       <Head>
         <title>ساینا گستر | خانه</title>
       </Head>
-      <Hero />
+
+      <Hero
+        title={'محصولات ساینا'}
+        subtitle={'توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر .توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر.'}
+      />
       <Products posts={filterPostsByCategory(posts, 'product')} />
       <Articles posts={filterPostsByCategory(posts, 'blog')} />
       <Accordions posts={filterPostsByCategory(posts, 'accordion')} />
     </>
   )
 }
-
-function filterPostsByCategory(posts, targetCategory) {
-  return posts.filter(post => post.categories.map(cat => cat.name.toLowerCase() == targetCategory.toLowerCase()).filter(item => item == true).length > 0)
-}
-
 export const getStaticProps = async () => {
-  
-  const extractThumbnailData = async (media_url) => {
-    if (!media_url) return null
-    return fetch(media_url)
-    .then(res => res.json())
-    .then(data => ({
-      src: data.source_url,
-      alt: data.alt_text,
-    }))
-  }
-  
-  const categoriesList = []
-  await fetch('http://localhost/sainaxFaBlog/wp-json/wp/v2/categories')
-  .then(res => res.json())
-  .then(categories => categories.forEach(category => {
-    categoriesList[category.id] = {
-      name: category.name,
-      slug: category.slug,
-    }
-  }))
-  
-  const posts = await fetch(`http://localhost/sainaxFaBlog/wp-json/wp/v2/posts`)
-  .then(res => res.json())
-  .then(async posts => await Promise.all(posts.map(async post => ({
-    link: post.link,
-    title: post.title.rendered,
-    content: post.content.rendered,
-    categories: post.categories.map(catId => categoriesList[catId]),
-    excerpt: post.excerpt.rendered,
-    date: post.date,
-    thumbnail: await extractThumbnailData(post._links["wp:featuredmedia"] ? post._links["wp:featuredmedia"][0].href : null)
-  }))))
-  
+  const posts = await fetchposts()
   return {
     props: {posts}
   }
