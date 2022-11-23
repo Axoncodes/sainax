@@ -2,23 +2,20 @@ import SubHeader from "../../../axg-react/SubHeader"
 import ProductTemplate from "../../../axg-react/shop/Product"
 import { fetchposts } from "../../../lib/posts"
 
-export default function Product({image, alt, name, currency, description, features, acf}) {
+export default function Product({targetProduct}) {
   return (
-    <>
+    <section className={'rtl'}>
       <SubHeader
         top={"بررسی ویژگی ها"}
         mainTitle={"فروشگاه ساینا"}
         description={"توضیحات زیر صفحه"}
       />
       <ProductTemplate
-        image={image}
-        alt={alt}
-        name={name}
-        currency={currency}
-        description={description}
-        features={features}
+        image={targetProduct.thumbnail.src}
+        name={targetProduct.title}
+        description={targetProduct.excerpt}
       />
-    </>
+    </section>
   )
 }
 
@@ -43,6 +40,6 @@ export const getStaticProps = async ({params}) => {
   .then(products => products.filter(item => item.slug == product)[0])
   
   return {
-    props: targetProduct
+    props: {targetProduct}
   }
 }

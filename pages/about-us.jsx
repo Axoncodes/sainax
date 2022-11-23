@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
 
-const Hero = dynamic(() => import("../modules/Hero"), {ssr: false})
+const Hero = dynamic(() => import("../axg-react/modules/v1/Hero"), {ssr: false})
 const Text = dynamic(() => import("../axg-react/Text"), {ssr: false})
 
 export default function Aboutus() {

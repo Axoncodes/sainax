@@ -2,8 +2,8 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import { fetchposts } from "../lib/posts";
 
-const Hero = dynamic(() => import("../modules/Hero"), {ssr: false})
-const PostTemplate = dynamic(() => import('../modules/PostTemplate'), {ssr: false,})
+const Hero = dynamic(() => import("../axg-react/modules/v1/Hero"), {ssr: false})
+const PostTemplate = dynamic(() => import('../axg-react/modules/v1/PostTemplate'), {ssr: false,})
 
 export default function Blog({posts}) {
   const postsList = posts.map((post, key) => {

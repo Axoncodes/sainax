@@ -6,9 +6,9 @@ import Script from 'next/script'
 import dynamic from 'next/dynamic'
 import ActivationHandler from '../axg-react/ActivationHandler'
 
-const Header = dynamic(() => import('../modules/Header'), {ssr: false,})
-const Topnav = dynamic(() => import('../modules/Topnav'), {ssr: false,})
-const Footer = dynamic(() => import('../modules/Footer'), {ssr: false,})
+const Header = dynamic(() => import('../axg-react/modules/v1/Header'), {ssr: false,})
+const Topnav = dynamic(() => import('../axg-react/modules/v1/Topnav'), {ssr: false,})
+const Footer = dynamic(() => import('../axg-react/modules/v1/Footer'), {ssr: false,})
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -30,8 +30,8 @@ export default function MyApp({ Component, pageProps }) {
       </main>
       <Footer />
       <ActivationHandler />
-      <Script type='module' src={`${process.env.BetaAxg}/init/v4`} strategy="beforeInteractive" />
-      <Script type='module' src={`${process.env.BetaAxg}/global/runScripts`} strategy="lazyOnload" />
+      <Script type='module' src={`${process.env.LocalAxg}/init/v4`} strategy="beforeInteractive" />
+      <Script type='module' src={`${process.env.LocalAxg}/global/runScripts`} strategy="lazyOnload" />
     </>
   )
 }
