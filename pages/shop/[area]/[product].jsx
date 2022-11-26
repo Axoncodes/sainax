@@ -14,6 +14,7 @@ export default function Product({targetProduct}) {
         image={targetProduct.thumbnail.src}
         name={targetProduct.title}
         description={targetProduct.excerpt}
+        area={targetProduct.acf.order_area}
       />
     </section>
   )
