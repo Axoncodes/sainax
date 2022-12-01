@@ -34,7 +34,7 @@ export default function Contactus() {
         <title>ساینا گستر | ارتباط با ساینا</title>
       </Head>
       <Hero
-        title={'ارتباط با ساینا'}
+        title={'ارتباط با ساینا گستر'}
         subtitle={'توضیحات درباره سرویس ها و محصولات ساینا'}
       />
       <section className={'container topy horizontal padding_l9'} >
