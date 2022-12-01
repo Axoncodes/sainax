@@ -15,7 +15,7 @@ export default function Home({posts}) {
       </Head>
 
       <Hero
-        title={'محصولات ساینا'}
+        title={'شرکت بازرگانی ساینا گستر'}
         subtitle={'توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر .توضیحات اولیه شرکت ساینا گستر. توضیحات اولیه شرکت ساینا گستر.'}
       />
       <Products posts={filterPostsByCategory(posts, 'product')} />
