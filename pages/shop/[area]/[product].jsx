@@ -11,7 +11,7 @@ export default function Product({targetProduct}) {
         description={"توضیحات زیر صفحه"}
       />
       <ProductTemplate
-        image={targetProduct.thumbnail.src}
+        image={targetProduct.thumbnail ? targetProduct.thumbnail.src : null}
         name={targetProduct.title}
         description={targetProduct.excerpt}
         area={targetProduct.acf.order_area}
