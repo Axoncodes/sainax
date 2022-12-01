@@ -35,6 +35,9 @@ body * {
   position: absolute;
   bottom: -10px;
 }
+.betterwordspacing {
+  word-spacing: 4px!important
+}
 
 .abitoffthetop {top: 10px}
 .articlessize {min-width: 30%}
