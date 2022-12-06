@@ -17,11 +17,11 @@ export default function Home({posts}) {
       <Hero
         title={'شرکت بازرگانی ساینا گستر'}
       >
-        <h2 className={'font_l5 nomargin rtl tertiary_color weight_l1'}> تامین و پخش کننده انواع <strong title='سیمان'>سیمان</strong> اعم از سیمان پوزولانی, تیپ دو و پنچ</h2>
+        <h2 className={'font_l4 nomargin rtl tertiary_color weight_l1'}> تامین و پخش کننده انواع <strong title='سیمان'>سیمان</strong> اعم از سیمان پوزولانی, تیپ 2 و 5</h2>
       </Hero>
       <Products posts={filterPostsByCategory(posts, 'product')} />
       <Articles posts={filterPostsByCategory(posts, 'blog')} />
-      <Accordions posts={filterPostsByCategory(posts, 'accordion')} />
+      {/* <Accordions posts={filterPostsByCategory(posts, 'accordion')} /> */}
     </>
   )
 }

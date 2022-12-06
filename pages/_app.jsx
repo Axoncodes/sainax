@@ -1,5 +1,6 @@
 import '../axg-react/global.scss'
 import '../styles/globals.css'
+import '../styles/all.css'
 import Head from 'next/head'
 import MetaTags from '../axg-react/MetaTags'
 import Script from 'next/script'
