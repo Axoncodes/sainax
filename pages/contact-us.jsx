@@ -40,27 +40,27 @@ export default function Contactus() {
       <section className={'container topy horizontal padding_l9'} >
         <section className={'subcontainer vertical norowgap'}>
           {customTitle('دفتر ها')}
-          {custombtn('مورد اول', '/blog')}
-          {custombtn('مورد اول', '/blog')}
-          {custombtn('مورد اول', '/blog')}
-          {custombtn('مورد اول', '/blog')}
-          {custombtn('مورد اول', '/blog')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
         </section>
         <section className={'subcontainer vertical norowgap'}>
           {customTitle('شماره های تماس')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
         </section>
         <section className={'subcontainer vertical norowgap'}>
           {customTitle('ایمیل ها')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
-          {custombtn('مورد اول', '/blog', 'address-book rx_light')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
         </section>
       </section>
     </>
