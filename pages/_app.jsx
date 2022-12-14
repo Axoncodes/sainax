@@ -31,8 +31,7 @@ export default function MyApp({ Component, pageProps }) {
       </main>
       <Footer />
       <ActivationHandler />
-      <Script type='module' src={`${process.env.Axg}/init/v4`} strategy="beforeInteractive" />
-      <Script type='module' src={`${process.env.Axg}/global/runScripts`} strategy="worker" />
+      <Script type='module' src={`${process.env.LocalAxg}/init/v4`} strategy="beforeInteractive" />
     </>
   )
 }
