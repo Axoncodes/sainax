@@ -8,7 +8,6 @@ import dynamic from 'next/dynamic'
 import ActivationHandler from '../axg-react/ActivationHandler'
 
 const Header = dynamic(() => import('../modules/Header'), {ssr: false,})
-const Topnav = dynamic(() => import('../modules/Topnav'), {ssr: false,})
 const Footer = dynamic(() => import('../modules/Footer'), {ssr: false,})
 
 export default function MyApp({ Component, pageProps }) {
@@ -23,7 +22,6 @@ export default function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Script src={'/head.js'} strategy="beforeInteractive" />
-      <Topnav />
       <Header />
 
       <main style={{overflow: 'hidden', flex: 1}}>

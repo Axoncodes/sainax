@@ -42,28 +42,30 @@ export default function Footer() {
             <section className={'subcontainer'}>{custombtn('021-86044653', 'tel:02186044653', 'fa-solid fa-square-phone')}</section>
             <section className={'subcontainer'}>{custombtn('0912-5400667', 'tel:09125400667', 'fa-solid fa-square-phone')}</section>
           </section>
-          <section className={'subcontainer horizontal horizontظalTabletBreak fitWidth'}>
+          <section className={'subcontainer horizontal horizontalTabletBreak fitWidth'}>
           <section className={'subcontainer'}>{custombtn('info@sainax.com', 'mailto:info@sainax.com', 'fa-solid fa-square-envelope', 'hidetextontablet')}</section>
             <section className={'subcontainer'}>{custombtn('', 'https://www.instagram.com/saina.gostar/', 'fa-brands fa-instagram-square', 'nocolgap')}</section>
             <section className={'subcontainer'}>{custombtn('', 'https://twitter.com/SainaGostar', 'fa-brands fa-twitter-square', 'nocolgap')}</section>
             <section className={'subcontainer'}>{custombtn('', 'https://www.linkedin.com/company/saina-gostar/', 'fa-brands fa-linkedin', 'nocolgap')}</section>
           </section>
         </section>
-        <section className={'subcontainer vertical lefty norowgap'}>
-          {customTitle('خدمات ساینا گستر')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
-        </section>
-        <section className={'subcontainer vertical lefty norowgap'}>
-          {customTitle('اطلاعات دفتر ساینا')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
-          {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+        <section className={'subcontainer horizontal horizontalTabletBreak norowgap'}>
+          <section className={'subcontainer vertical lefty norowgap'}>
+            {customTitle('خدمات ساینا گستر')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          </section>
+          <section className={'subcontainer vertical lefty norowgap'}>
+            {customTitle('اطلاعات دفتر ساینا')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+            {custombtn('مورد اول', '/blog', 'fa-solid fa-square-phone')}
+          </section>
         </section>
       </section>
       <section className={'container rtl secondary_bg tertiary_color'}>

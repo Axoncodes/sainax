@@ -66,3 +66,7 @@ body * {
 .highlightOnlyIconOnHover .axg_icon, .highlightOnlyIconOnHover, .highlightOnlyIconOnHover .buttonText {transition: all .3s}
 .highlightOnlyIconOnHover:hover {background-color: var(--secondaryColor)!important}
 .highlightOnlyIconOnHover:hover .axg_icon, .highlightOnlyIconOnHover:hover .buttonText {color: var(--tertiaryTextColor)!important}
+
+@media (min-width: 601px) {
+  .searchbarsizes {width: 45%!important}
+}

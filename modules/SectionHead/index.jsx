@@ -20,8 +20,8 @@ export default function SectionHead({title, btnTitle, btnLink, textcustomclasses
       text={title}
       innercustomclasses={'wide_important'}
       textcolor={textcolor}
-      textclasses={`nomargin widePadding_l9 ${textcustomclasses}`}
-      textalign={'lefty'}
+      textclasses={`nomargin ${textcustomclasses}`}
+      textalign={'righty'}
       textfontsize={'var(--l7-text-fontSize)'}
     />
   </>

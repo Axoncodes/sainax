@@ -24,8 +24,9 @@ export default function PostTemplate({
           alt={image.alt}
           customclasses={'round_l1'}
         /> : ''}
-        <section className="subcontainer vertical padding_l4 widePadding_l7 righty rtl">
+        <section className="subcontainer vertical padding_l4 widePadding_l7 righty">
           <Text
+            innercustomclasses={''}
             subtext={title}
             subtextclasses={`nomargin weight_l9`}
             subtextcolor={'#001659'}
@@ -34,7 +35,7 @@ export default function PostTemplate({
             textcolor={'#565969'}
             textfontsize={'var(--l2-text-fontSize)'}
             textclasses={`nomargin`}
-            customclasses={'topy'}
+            customclasses={'topy fitWidth'}
             subtextalign={'righty'}
             textalign={'righty'}
           />

@@ -1,4 +1,3 @@
-import Carousel from "../../axg-react/Carousel";
 import PostTemplate from "../PostTemplate";
 import SectionHead from "../SectionHead";
 
@@ -22,7 +21,7 @@ export default function Articles({posts}) {
   return (
     <>
       <section className="container vertical padding_l0 primary_bg">
-        <section className="subcontainer horizontal righty padding_l3">
+        <section className="subcontainer horizontal righty padding_l3 horizontalTabletBreak">
           <SectionHead
             title={'آخرین مطالب ساینا گستر'}
             btnTitle={'همه مقالات'}
@@ -30,7 +29,7 @@ export default function Articles({posts}) {
             textcolor={'#fff'}
           />
         </section>
-        <section className={'container wide'}>{postsList}</section>
+        <section className={'container wide horizontal'}>{postsList}</section>
       </section>
     </>
   )
