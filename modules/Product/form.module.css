@@ -1,0 +1,35 @@
+.formCover {
+  transition: opacity 0.3s ease 0s;
+  position: fixed;
+  z-index: -1;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  /* width: 70%; */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border-radius: 7px;
+  padding: 2%;
+  min-width: 270px;
+}
+
+.visibleformCover {
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 2%;
+  min-width: 270px;
+}
+
+.open {
+  z-index: 9;
+  opacity: 1;
+}
+
+.shadowOuterDom {
+  filter: brightness(0.5);
+  background-color: #0005;
+}
+
+.formValidPop {
+  display: none;
+}
