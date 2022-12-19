@@ -12,6 +12,8 @@ export default function PostTemplate({
   date,
   customstyles={},
   innercustomstyles={},
+  price,
+  currency,
 }) {
   return (
     <section style={customstyles} className={`${customclasses} subcontainer vertical`}>
@@ -39,6 +41,22 @@ export default function PostTemplate({
             subtextalign={'righty'}
             textalign={'righty'}
           />
+          {/* price */}
+          {price ? <Text
+            innercustomclasses={'nocolgap'}
+            orderdirection={'horizontal'}
+            subtext={price}
+            subtextclasses={`nomargin weight_l9`}
+            subtextcolor={'#001659'}
+            subtextfontsize={'var(--l5-text-fontSize)'}
+            text={currency}
+            textcolor={'#565969'}
+            textfontsize={'var(--l2-text-fontSize)'}
+            textclasses={`nomargin`}
+            customclasses={'topy fitWidth'}
+            subtextalign={'righty'}
+            textalign={'righty'}
+          /> : ''}
           {/* shoudl be a plus icon! */}
           <Button
             text={'مشاهده جزئیات'}
