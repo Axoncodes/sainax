@@ -1,10 +1,10 @@
 import SubHeader from "../../../axg-react/SubHeader"
-import ProductTemplate from "../../../axg-react/shop/Product"
+import ProductTemplate from "../../../modules/Product"
 import { fetchposts } from "../../../lib/posts"
 
 export default function Product({targetProduct}) {
   return (
-    <section className={'rtl'}>
+    <section>
       <SubHeader
         top={"بررسی ویژگی ها"}
         mainTitle={"فروشگاه ساینا"}
@@ -12,7 +12,7 @@ export default function Product({targetProduct}) {
       />
       <ProductTemplate
         image={targetProduct.thumbnail ? targetProduct.thumbnail.src : null}
-        name={targetProduct.title}
+        name={{name:targetProduct.title, slug: targetProduct.slug}}
         description={targetProduct.excerpt}
         area={targetProduct.acf.order_area}
       />
