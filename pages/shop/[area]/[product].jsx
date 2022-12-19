@@ -15,6 +15,8 @@ export default function Product({targetProduct}) {
         name={{name:targetProduct.title, slug: targetProduct.slug}}
         description={targetProduct.excerpt}
         area={targetProduct.acf.order_area}
+        price={targetProduct.acf.price.slug}
+        currency={'تومان'}
       />
     </section>
   )
