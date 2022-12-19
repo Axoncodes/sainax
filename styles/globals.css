@@ -70,3 +70,6 @@ body * {
 @media (min-width: 601px) {
   .searchbarsizes {width: 45%!important}
 }
+
+.blogcontent p {font-size: var(--l3-text-fontSize)}
+.blogcontent h1 {font-size: var(--l7-text-fontSize)}
