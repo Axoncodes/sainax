@@ -1,6 +1,5 @@
-import dynamic from 'next/dynamic'
-const Text = dynamic(() => import('../../axg-react/Text'), {ssr: false,})
-const Button = dynamic(() => import('../../axg-react/Button'), {ssr: false,})
+import Button from "../../axg-react/Button"
+import Text from "../../axg-react/Text"
 
 export default function Footer() {
   const custombtn = (text, link, icon, classes, blank) => <Button
