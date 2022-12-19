@@ -29,7 +29,6 @@ export default function ProductionForm({products, visible, area, name}) {
     
     axios(config).then(response => {
       if (response.data.status.toLowerCase() == "ok") {
-        console.log("data submited")
         orderForm.style.display = "none"
         formValidPop.style.display = "block"
       }
@@ -60,7 +59,7 @@ export default function ProductionForm({products, visible, area, name}) {
   const [transportedType, setTransportedType] = useState('none')
 
   const handleTransportedTypeChange = (event) => {
-    console.log('handleTransportedTypeChange');
+    document.querySelector('select[name="quantity"]').selectedIndex = 0
     const newData = event.target.value
     setTransportedType(newData)
   }
