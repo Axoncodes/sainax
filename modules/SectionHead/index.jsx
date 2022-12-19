@@ -6,7 +6,7 @@ export default function SectionHead({title, btnTitle, btnLink, textcustomclasses
   return (
     <>
       {/* TODO: This icon has to be a left carrot, but since we ain't got any for now, i'm putting a random icon */}
-      <Button
+      {btnTitle ? <Button
       text={btnTitle}
       iconclasses={'tertiary_color secondary_bg round_l1 padding_l2 fa-solid fa-pallet-boxes'}
       innerclasses={'padding_l0'}
@@ -15,7 +15,7 @@ export default function SectionHead({title, btnTitle, btnLink, textcustomclasses
       color={subtextcolor}
       plane={'1'}
       link={btnLink}
-    />
+    /> : ''}
     <Text
       text={title}
       innercustomclasses={'wide_important'}
