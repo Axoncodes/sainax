@@ -1,4 +1,3 @@
-import Carousel from '../../axg-react/Carousel'
 import PostTemplate from '../PostTemplate'
 import SectionHead from '../SectionHead'
 
@@ -12,6 +11,8 @@ export default function Articles({posts}) {
     innerclasses={'carousel_inneritem articlesinnersize productsListBorder'}
     title={post.title}
     link={`/shop/${post.acf.order_area.slug}/${post.slug}`}
+    price={post.acf.price.slug}
+    currency={'تومان'}
   />)
 
   return (
