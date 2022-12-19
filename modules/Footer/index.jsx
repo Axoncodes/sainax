@@ -3,7 +3,7 @@ const Text = dynamic(() => import('../../axg-react/Text'), {ssr: false,})
 const Button = dynamic(() => import('../../axg-react/Button'), {ssr: false,})
 
 export default function Footer() {
-  const custombtn = (text, link, icon, classes) => <Button
+  const custombtn = (text, link, icon, classes, blank) => <Button
     text={text}
     iconclasses={icon ? `font_l4 round_l1 rexfont_init ${icon}` : ''}
     innerclasses={`padding_l2 padding_l0 ${classes}`}
@@ -15,6 +15,7 @@ export default function Footer() {
     height='40px'
     plane={'1'}
     link={link}
+    blank={!!blank}
   />
 
   const customTitle = title => <Text
@@ -44,9 +45,9 @@ export default function Footer() {
           </section>
           <section className={'subcontainer horizontal horizontalTabletBreak fitWidth'}>
           <section className={'subcontainer'}>{custombtn('info@sainax.com', 'mailto:info@sainax.com', 'fa-solid fa-square-envelope', 'hidetextontablet')}</section>
-            <section className={'subcontainer'}>{custombtn('', 'https://www.instagram.com/saina.gostar/', 'fa-brands fa-instagram-square', 'nocolgap')}</section>
-            <section className={'subcontainer'}>{custombtn('', 'https://twitter.com/SainaGostar', 'fa-brands fa-twitter-square', 'nocolgap')}</section>
-            <section className={'subcontainer'}>{custombtn('', 'https://www.linkedin.com/company/saina-gostar/', 'fa-brands fa-linkedin', 'nocolgap')}</section>
+            <section className={'subcontainer'}>{custombtn('', 'https://www.instagram.com/saina.gostar/', 'fa-brands fa-instagram-square', 'nocolgap', true)}</section>
+            <section className={'subcontainer'}>{custombtn('', 'https://twitter.com/SainaGostar', 'fa-brands fa-twitter-square', 'nocolgap', true)}</section>
+            <section className={'subcontainer'}>{custombtn('', 'https://www.linkedin.com/company/saina-gostar/', 'fa-brands fa-linkedin', 'nocolgap', true)}</section>
           </section>
         </section>
         <section className={'subcontainer horizontal horizontalTabletBreak norowgap'}>
