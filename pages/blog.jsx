@@ -16,7 +16,7 @@ export default function Blog({posts}) {
       customclasses={'fitWidth articlessize'}
       innerclasses={'round_l1 articlesinnersize'}
       title={post.title}
-      link={post.link}
+      link={`/blog/${post.slug}`}
       date={`${date.getFullYear()} ${months[date.getMonth()]} ${date.getDate()}`}
     />
   })
@@ -29,9 +29,7 @@ export default function Blog({posts}) {
         title={'وبلاگ ساینا'}
         subtitle={'توضیحات درباره سرویس ها و محصولات ساینا'}
       />
-      <section className={'container subcontainer centerMarge'}>
-        {postsList}
-      </section>
+      <section className={'container subcontainer centerMarge'}>{postsList}</section>
     </>
   )
 }
