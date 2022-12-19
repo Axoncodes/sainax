@@ -3,9 +3,9 @@ import Head from "next/head";
 import { fetchposts, filterPostsByCategory } from "../lib/posts";
 
 const Articles = dynamic(() => import("../modules/articles"), {ssr: false})
-// const Accordions = dynamic(() => import("../modules/Accordions"), {ssr: false})
 const Products = dynamic(() => import("../modules/Products"), {ssr: false})
 const Hero = dynamic(() => import("../modules/Hero"), {ssr: false})
+const ProductFormSection = dynamic(() => import("../modules/ProductFormSection"), {ssr: false})
 
 export default function Home({posts}) {
   return (
@@ -19,7 +19,7 @@ export default function Home({posts}) {
       </Hero>
       <Products posts={filterPostsByCategory(posts, 'product')} />
       <Articles posts={filterPostsByCategory(posts, 'blog')} />
-      {/* <Accordions posts={filterPostsByCategory(posts, 'accordion')} /> */}
+      <ProductFormSection products={filterPostsByCategory(posts, 'product')} />
     </>
   )
 }
