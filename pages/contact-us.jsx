@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
-const Hero = dynamic(() => import("../axg-react/modules/v1/Hero"), {ssr: false})
+const Hero = dynamic(() => import("../modules/Hero"), {ssr: false})
 const Text = dynamic(() => import("../axg-react/Text"), {ssr: false})
 const Button = dynamic(() => import('../axg-react/Button'), {ssr: false,})
 
