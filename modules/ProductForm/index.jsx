@@ -97,21 +97,21 @@ export default function ProductionForm({products, visible, area, name}) {
           <section className={'subcontainer horizontal rtl'}>
             <label className={'subcontainer vertical righty ltr'}>
               نام / نام شرکت
-              <input className={'rtl'} type={'text'} name={'fname'} placeholder={'نام / نام شرکت'} />
+              <input className={'rtl wide'} type={'text'} name={'fname'} placeholder={'نام / نام شرکت'} />
             </label>
             <label className={'subcontainer vertical righty ltr'}>
               نام خانوادگی
-              <input className={'rtl'} type={'text'} name={'lname'} placeholder={'نام خانوادگی'} />
+              <input className={'rtl wide'} type={'text'} name={'lname'} placeholder={'نام خانوادگی'} />
             </label>
           </section>
           <section className={'subcontainer horizontal rtl'}>
             <label className={'subcontainer vertical righty ltr'}>
               شماره تماس
-              <input type={'text'} name={'tel'} placeholder={'شماره تماس'} required/>
+              <input className={'wide'} type={'text'} name={'tel'} placeholder={'شماره تماس'} required/>
             </label>
             <label className={'subcontainer vertical righty ltr'}>
               ایمیل
-              <input type={'text'} name={'email'} placeholder={'ایمیل'} />
+              <input className={'wide'} type={'text'} name={'email'} placeholder={'ایمیل'} />
             </label>
           </section>
         </section>
@@ -166,7 +166,7 @@ export default function ProductionForm({products, visible, area, name}) {
           </label>
         </section>
       </section>
-      <input type={'submit'} value={'ارسال درخواست'} />
+      <input className={'wide'} type={'submit'} value={'ارسال درخواست'} />
       </form>
     </section>
   </>)
