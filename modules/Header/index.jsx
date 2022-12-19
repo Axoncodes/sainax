@@ -1,17 +1,28 @@
-import dynamic from "next/dynamic";
 import { useState } from "react";
 import { useEffect } from "react";
 import { fetchposts } from '../../lib/posts'
-const HeaderComponent = dynamic(() => import('../../axg-react/Header'), {ssr: false,})
+import HeaderComponent from '../../axg-react/Header'
 
 export default function Header() {
   const [posts, setPosts] = useState([])
-  useEffect(() => {fetchposts().then(posts =>setPosts(posts))}, [])
+  useEffect(() => {
+    fetchposts('product')
+    .then(posts => posts.map(post => ({
+      title: post.title,
+      url: `/shop/${post.acf.order_area.slug}/${post.slug}`,
+      level: 'undertab',
+      color: '#fff',
+      dir: 'rtl',
+      activeBg: 'var(--secondaryColor)',
+    })))
+    .then(posts => setPosts(posts))
+  }, [])
   useEffect(() => {
     searchQueries['mainsearchquery'] = {searchquerynames: posts.map(post => post.title), searchquerylinks: posts.map(post => post.link),}
     !!window['searchbarV2Handler'] ? searchbarV2Handler() : null
+    setTimeout(() => {console.log('dropdownV4Handler'); !!window['dropdownV4Handler'] ? dropdownV4Handler() : null}, 1000)
   }, [posts])
-  return <HeaderComponent
+  return posts.length > 0 ? <HeaderComponent
     SearchbarPlaceholder={"محصول خود را جستجو کنید"}
     searchbar = {{
       id: 'main_searchbar',
@@ -74,30 +85,7 @@ export default function Header() {
             color: 'var(--secondaryColor)',
             fontsize: 'var(--l7-text-fontSize)',
             dir: 'rtl',
-            content: [
-              {
-                title: 'سیمان پوزولانی (تیپ 1)',
-                url: '/shop/tehran-cement/type-1',
-                level: 'undertab',
-                color: '#fff',
-                dir: 'rtl',
-                activeBg: 'var(--secondaryColor)',
-              },
-              {
-                title: 'سیمان تیپ 2',
-                url: '/shop/tehran-cement/type-2',
-                level: 'undertab',
-                color: '#fff',
-                dir: 'rtl',
-              },
-              {
-                title: 'سیمان تیپ 5',
-                url: '/shop/tehran-cement/type-5',
-                level: 'undertab',
-                color: '#fff',
-                dir: 'rtl',
-              },
-            ]
+            content: posts
           },
         ]
       },
@@ -120,5 +108,5 @@ export default function Header() {
         dir: 'rtl',
       },
     ]}
-  />
+  /> : ''
 }
