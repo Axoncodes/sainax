@@ -18,7 +18,6 @@ export default function Product({image, alt, name, price, currency, description,
         <title>{name.name}</title>
       </Head>
       <section
-        // onClick={closePopup}
         id="mainContent"
         className={`rtl container splitToLeft horizontal ${formStyle.outerDom}`}
       >
@@ -32,22 +31,46 @@ export default function Product({image, alt, name, price, currency, description,
             />
           </div>
         </section> : ''}
-        <section className="subcontainer">
-          <section className="subcontainer centerOnTablet" style={{rowGap: '0px'}}>
-            <section className="subcontainer" style={{columnGap: '7px', width: 'fit-content'}}>
+        <section className="subcontainer norowgap">
+          <section className="padding_l3 widePadding_l0 subcontainer vertical centerOnTablet" style={{rowGap: '0px'}}>
+            <section className="subcontainer">
             {/* title */}
-              <Text text={name.name} textclasses={'nomargin'} textcolor={"var(--primaryTextColor)"} textfontsize={"var(--l7-text-fontSize)"} inlineStyle={{marginTop: `-1.8%`, marginBottom: '1%'}} />
+              <Text
+                text={name.name}
+                textclasses={'nomargin'}
+                textcolor={"var(--primaryTextColor)"}
+                textfontsize={"var(--l7-text-fontSize)"}
+                inlineStyle={{marginTop: `-1.8%`, marginBottom: '1%'}}
+                customclasses={'centerOnTablet'}
+              />
             </section>
             {/* price */}
             {price ? (
-              <section className="subcontainer" style={{columnGap: '7px', width: 'fit-content'}}>
-                <Text text={price} textclasses={'nomargin'} textcolor={"var(--primaryTextColor)"} textfontsize={"var(--l2-text-fontSize)"} inlineStyle={{letterSpacing: '2px'}} />,
-                <Text text={currency} textclasses={'nomargin'} textcolor={"var(--primaryTextColor)"} textfontsize={"var(--l2-text-fontSize)"} />
+              <section className="subcontainer">
+                <Text
+                  customclasses={'centerOnTablet'}
+                  orderdirection={'horizontal horizontalTabletBreak'}
+                  innercustomclasses={'norowgap nocolgap'}
+                  text={price}
+                  textclasses={'nomargin'}
+                  textcolor={"var(--primaryTextColor)"}
+                  textfontsize={"var(--l2-text-fontSize)"}
+                  inlineStyle={{letterSpacing: '2px'}}
+                  subtext={currency}
+                  subtextclasses={'nomargin'}
+                  subtextcolor={"var(--primaryTextColor)"}
+                  subtextfontsize={"var(--l2-text-fontSize)"}
+                  />
               </section>
             ) : ''}
           </section>
           {/* description */}
-          <Text text={description} textcolor={"var(--primaryTextColor)"} textfontsize={"var(--l3-text-fontSize)"} />
+          <Text
+            text={description}
+            textcolor={"var(--primaryTextColor)"}
+            textfontsize={"var(--l3-text-fontSize)"}
+            customclasses={'centerOnTablet'}
+          />
           {/* request button */}
           <section className="subcontainer centerOnTablet" style={{rowGap: '0px'}}>
             <Button
@@ -62,7 +85,13 @@ export default function Product({image, alt, name, price, currency, description,
               id={'orderbtn'}
               textclasses={'betterwordspacing'}
             />
-            <Text textclasses={'nomargin'} text={"*بزودی بعد ثبت درخواست و پر کردن فرم, با شما تماس گرفته خواهد شد"} color={"var(--secondaryTextColor)"} textfontsize={"var(--l1-text-fontSize)"} />
+            <Text
+              textclasses={'nomargin'}
+              text={"*بزودی بعد ثبت درخواست و پر کردن فرم, با شما تماس گرفته خواهد شد"}
+              color={"var(--secondaryTextColor)"}
+              textfontsize={"var(--l1-text-fontSize)"}
+              customclasses={'centerOnTablet'}
+            />
           </section>
 
           {/* separator */}
